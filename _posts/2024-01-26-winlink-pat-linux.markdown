@@ -74,15 +74,16 @@ probably other apps that grab sound devices under linux) prevent sound devices
 from showing up in wine! So those apps cannot be running while VaraFM is
 running.
 
-And I choose COM 10 with RTS as the PTT configuration. That COM port maps to my
-digirig as per this [COM port mapping tutorial][km4ac_comport]. It's not clear if I need that if since rigctld could control the PTT. I'm not
-sure if VARA could just not do that and leave it to Pat/rigctld.
+And I chose COM 10 with RTS as the PTT configuration. That COM port maps to my
+digirig as per this [COM port mapping tutorial][km4ac_comport]. It's not clear
+if I need that since rigctld could control PTT. I'm not sure if VARA could just
+not do that and leave it to Pat/rigctld.
 
-Also linux specific, I have `sound=alsa` from winetricks. Otherwise it'll use
-pulseaudio (or maybe pipewire if you're using a linux OS from the last few
-years). I hear that causes the audio to be jittery or something. It also hides
-the audio devices from Wine and just lists "Pulseaudio". So then you'd have to
-set those up...  somehow else?
+Also linux specific, I have `sound=alsa` from [winetricks][winetricks_alsa].
+Otherwise it'll use pulseaudio (or maybe pipewire if you're using a linux OS
+from the last few years). I hear pulseaudio causes the audio to be jittery or
+something. It also hides the audio devices from Wine and just lists
+"Pulseaudio". So then you'd have to set those up...  somehow else?
 
 The popup asking for $65 during transmission is kinda irritating. But it is
 nice of EA5HVK to provide it. Maybe you and I ought to buy licenses...
@@ -123,9 +124,9 @@ HTs too.
 ### HT: Yaesu FT-65R
 
 I just turned my HT on and tuned into the W7AW-10 Winlink Gateway at 439.850
-MHz.  Using my HF rig Pat can control the VFO, which is convenient, but my HT
-is simple and has no remote VFO control. So it just sits there waiting for
-VaraFM and the digirig to hit the PTT and send/recv audio.
+MHz. Using my HF rig Pat can control the VFO, which is convenient, but my HT is
+simple and has no remote VFO control. So it just sits there waiting for VaraFM
+and the digirig to hit the PTT and send/recv audio.
 
 I did have my HT fall over at one point and VaraFM could no long connect to the
 gateway. So the connection isn't superb.
@@ -133,7 +134,8 @@ gateway. So the connection isn't superb.
 I think you can tune the audio level if you hold the monitor button down and
 watch the audio input VU meter in VaraFM. I assume you want it high, but not in
 the red. It seemed fairly touchy to me. VaraFM calibration can also help you
-dial this in.
+dial this in. That's the "Auto Tune" option under VaraFM > Sound Card...
+
 
 ### Pat
 
@@ -158,16 +160,21 @@ default stuff or easy stuff like my callsign/password, locator, etc.
 }
 ```
 
-## That's it!
+## Thank You
 
-It works. I've sent mail. And I've been told that my mail was received. I hope
-this helps you, even if "you" is really "me".
+I could not have done this if Brendan Kitts, KE7TNM, and Ryan Weber, NN7M, from
+the West Seattle Amateur Radio Club had not set up the W7AW-10 Winlink gateway.
+They also both gave me a lot of feedback and encouragement as I was trying to
+make connections.
+
+I hope this helps you, even if "you" is really "me".
 
 [winlink]: <https://winlink.org/> "Winlink provides an email gateway for amateur radio signals"
 [pat]: <https://getpat.io/> "Pat is a Winlink client for linux"
 [digirig]: <https://digirig.net/> "Digirig is a USB soundcard to connect radios without a built in TNC to a computer"
 [varafm]: <https://winlink.org/tags/varafm> "VaraFM is a protocol for sending data over RF and the associated app to transcode from data into audio signals (aka modem) over RF"
-[rigctld]: <https://hamlib.sourceforge.net/html/rigctld.1.html> "Hamlib rigctld is a linux app that can control radio rigs and provide acess to other apps"
+[rigctld]: <https://hamlib.sourceforge.net/html/rigctld.1.html> "Hamlib rigctld is a linux app that can control radio rigs and provide access to other apps"
 [wsarc]: <https://w7aw.org"> "West Seattle Amateur Radio Club"
 [wsarc_winlinkgateway]: <http://www.appliedaisystems.com/w7aw_monitor.html> "WSARC Winlink gateway monitoring page"
 [km4ac_comport]: <https://www.youtube.com/watch?v=iYYRTu6myRc> "KM4AC shows setting up a COM port to linux device mapping for Wine"
+[winetricks_alsa]: <https://askubuntu.com/questions/77210/how-to-change-the-default-audio-in-wine-to-alsa-only> "Info on using winetricks to configure the audio source"
