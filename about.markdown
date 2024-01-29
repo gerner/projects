@@ -4,15 +4,11 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Amateur radio callsign [KK7LZM][kk7lzm_qrz]
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Member of the [West Seattle Amateur Radio Club][wsarc]
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Developer, tech executive, retired early, tinkerer.
 
-
-[jekyll-organization]: https://github.com/jekyll
+[kk7lzm_qrz]: <https://www.youtube.com/> "KK7LZM QRZ page"
+[wsarc]: <https://w7aw.org> "West Seattle Amateur Radio Club"

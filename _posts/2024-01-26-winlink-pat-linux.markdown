@@ -25,7 +25,9 @@ You need:
 
 Here are the commands:
 
-Start rigctld (it'll keep running)
+Start rigctld (it'll keep running). It's not actually used, Vara handles PTT
+and you need to manually tune the frequency on your HT. Also see note below
+about RTS vs DTR for the FT-65R.
 
 ```bash
 rigctld -p /dev/ttyUSB0 -P RTS
@@ -60,7 +62,7 @@ Gotchas I ran into with solutions:
 
 ### VaraFM
 
-![VaraFM mediocre calibratio results]({{site.baseurl}}/assets/images/varafm_calibration.png)
+![VaraFM mediocre calibration results]({{site.baseurl}}/assets/images/varafm_calibration.png)
 
 I followed some guide on installing it under linux, but basically download and
 run the installer under wine. I have a WINEPREFIX set up just for Winlink.
@@ -120,6 +122,12 @@ rigctld -p /dev/ttyUSB0 -P RTS
 `-P RTS` is the PTT type: RTS uses one of the rings on the audio jack I think.
 But that's just how PTT control works on the FT-65. That might work for other
 HTs too.
+
+NOTE: I've done a little bit of playing with AX.25 packet mode radio using
+[Direwolf][direwolf] and discovered that Direwolf's DTR PTT option doesn't work
+on my Yaesu FT-65R. I needed to add the DTR option. In fact, I played around
+with rigctl and could not get it to activate PTT using RTS. I believe that
+means I need to use DTR and NOT RTS, but I haven't confirmed that.
 
 ### HT: Yaesu FT-65R
 
