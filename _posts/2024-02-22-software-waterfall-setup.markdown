@@ -82,6 +82,20 @@ SDR++ should now show spots on the waterfall. You can start RigSync ("Start"
 button on the left panel somewhere) and any tuning you do in SDR++ will be
 reflected on your rig and vice versa.
 
+Edit: After playing around with this setup, I noticed quite bad interference
+across the 10m band whenever I turned on the RigSync plugin. It turns out that
+I was getting some kind of RFI over the USB cable from my computer into my
+radio. Adding a ferrite bead on the USB cable (specifically the cable between a
+USB hub I use and the radio), the RFI almost complete disappears.
+
+I actually tried two ferrite beads. The first was a cheap no-name bead from
+Amazon that had a small effect on the RFI. The second was a Palomar Engineering
+ferrite bead which worked much better. You get what you pay for I guess.
+
+I thought that was surprising and I'm really glad it was easy to resolve with
+just a ferrite bead.
+
+
 [sdrpp]: <https://www.sdrpp.org/> "SDR++ visualizes radio signals on a waterfall"
 [potaapp]: <https://pota.app> "Pota.app hosts information about parks on the air activations"
 [hamqth]: <https://www.hamqth.com> "HamQTH has an API that shares dxcluster spots"
